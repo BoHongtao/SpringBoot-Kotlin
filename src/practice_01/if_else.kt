@@ -11,8 +11,7 @@ fun max(a:Int,b:Int):Int {
 }
 
 //可以简写
-fun min(a:Int,b:Int) = if(a>b) b else b
-
+fun min(a:Int,b:Int) = if( a > b) b else b
 
 fun main(args: Array<String>) {
     val a = 1;
