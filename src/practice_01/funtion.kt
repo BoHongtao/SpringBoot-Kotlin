@@ -15,10 +15,22 @@ fun sum_02(a:Int,b:Int) {
     println("sum_02 is ${a+b}")
 }
 
+
+//可变变量
+fun <T> asList(vararg ts: T): List<T> {
+    val result = ArrayList<T>()
+    for (t in ts)
+        result.add(t)
+    return result
+}
+
 fun main(args: Array<String>) {
     val sum = sum(1,2)
     println("sum is $sum");
     val sum_01 = sum_01(1,2)
     println("sum_01 is $sum_01")
     sum_02(1,2)
+
+    val list = asList(1,2,3)
+    println(list)
 }
