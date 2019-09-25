@@ -54,12 +54,29 @@ fun main(args: Array<String>) {
 
     //可变
     val mutalbe_num_map = mutableMapOf("one" to 1,"two" to 2)
+    //性能考虑不用to,因为会浪费内存
+    val mutable_num_map_01 = mutableMapOf<String,String>().apply { this["one"]="1";this["two"]="2" }
     //增加
     mutalbe_num_map.put("three",3)
     mutalbe_num_map["four"]=4
     println(mutalbe_num_map)
+    println(mutable_num_map_01)
 
+    //创建空集合
+    val emptyList_demo = emptyList<String>()
+    val emptySet_demo = emptySet<String>()
+    val emptyMap_demo = emptyMap<String,String>()
 
+    //复制
+    val list = listOf(1,2,3)
+    val list_copy = list.toList()
+    println(list_copy)
 
+    val set = mutableSetOf<Int>(12,34)
+    val set_copy = set.toMutableSet()
+    println(set_copy)
 
+    val map = mutableMapOf<String,String>().apply { this["key"]="2" }
+    val map_copy = map.toMutableMap()
+    println(map_copy)
 }
